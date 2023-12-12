@@ -34,6 +34,7 @@ function Register() {
             password:password
         }
         try{
+            
             const data=await api.post("/users/login/admin-dashboard", userLoginInitials);
             if(data){
                 storeAuthToken(data.password)
